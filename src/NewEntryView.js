@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import { Link } from "react-router-dom";
+import EntryForm from "./EntryForm";
 
 class NewEntryView extends Component {
     state = { errorMessage: "", category: null };
@@ -19,10 +20,12 @@ class NewEntryView extends Component {
             <div>
                 { errorMessage }
                 {category &&
-                    <div>
-                        <Link to="/category"><button>Back To Categories</button></Link>
-                        <h1>New {category} entry</h1>
-                    </div>
+    <div>
+        <Link to="/category"><button>Back To Categories</button></Link>
+        <h1>New {category} entry</h1>
+        <EntryForm />
+    </div>
+}
                 }
             </div>
         );
