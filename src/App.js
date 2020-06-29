@@ -11,6 +11,9 @@ class App extends Component {
 <BrowserRouter>
     <div>
         <Route path="/" component={HomeView} />
+        <Route path="/test" component={HomeView} />
+        <Route path="/category/test" component={HomeView} />
+        <Route path="/category" component={HomeView} />
         <Route exact path="/category" component={CategorySelectionView} />
         <Route exact path="/entry" component={NewEntryView} />
     </div>
